@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Todos</title>
+  <!-- favicon  -->
+  <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/google-keep.png">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=McLaren|Montserrat&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <!-- Googlr Material icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+</head>
+
+<body>
+  <header>
+    <h1 class="header__h1">
+      <span class="header__h1__span material-icons">
+        format_list_bulleted
+      </span>
+      ToDos
+    </h1>
+    <a class="header__h1__a">完了タスクの削除</a>
+  </header>
+  <main>
+    <div class="container">
+      <h3>タスクの優先度を設定しましょう</h3>
+      <fieldset>
+        <input id="item-1" class="fieldset__input" type="radio" name="due-date" value="today" checked="checked" />
+        <label class="fieldset__label" for="item-1">
+          高
+        </label>
+        <input id="item-2" class="fieldset__input" type="radio" name="due-date" value="week" />
+        <label class="fieldset__label" for="item-2">
+          中
+        </label>
+        <input id="item-3" class="fieldset__input" type="radio" name="due-date" value="month" />
+        <label class="fieldset__label" for="item-3">
+          低
+        </label>
+        <input id="item-4" class="fieldset__input" type="radio" name="due-date" value="other" />
+        <label class="fieldset__label" for="item-4">
+          その他
+        </label>
+      </fieldset>
+      <form class="form--init">
+        <input autofocus id="todo-input" type="text" aria-label="Enter a new todo item" placeholder="タスクを入力しよう" class="form--init__input" />
+      </form>
+    </div>
+
+    <div class="grid">
+      <div class="grid__item">
+        <h3 class="grid__item__h3" id="today">高</h3>
+        <ul class="todo-list js-todo-list today"></ul>
+      </div>
+      <div class="grid__item">
+        <h3 class="grid__item__h3" id="week">中</h3>
+        <ul class="todo-list js-todo-list week"></ul>
+      </div>
+      <div class="grid__item">
+        <h3 class="grid__item__h3" id="month">低</h3>
+        <ul class="todo-list js-todo-list month"></ul>
+      </div>
+      <div class="grid__item">
+        <h3 class="grid__item__h3" id="other">その他</h3>
+        <ul class="todo-list js-todo-list other"></ul>
+      </div>      　
+    </div>
+  </main>
+
+  <div class="footer-wrap">
+    <footer>
+      <p class="footer"></p>
+    </footer>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+
+</html>
