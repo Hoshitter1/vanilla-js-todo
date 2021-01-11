@@ -1,4 +1,3 @@
-import './styles/style.css';
 import renderTodo from "./modules/render-todo"
 export let todoItems = [];
 
