@@ -1,0 +1,368 @@
+/* General styling */
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eee;
+  padding: 0 16px;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+}
+
+header {
+  background-color: #f5ba13;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  color: #ccc;
+}
+
+form {
+  position: relative;
+  background: #fff;
+  height: auto;
+}
+
+form input {
+  outline: none;
+  border: none;
+  font-family: inherit;
+  resize: none;
+}
+
+fieldset {
+  border: transparent;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  fieldset {
+    font-size: 0.9rem;
+  }
+}
+
+/* Header */
+.header__h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+  display: inline-block;
+}
+
+.header__h1__span {
+  font-size: 48px;
+  vertical-align: middle;
+}
+
+.header__h1__a {
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+  float: right;
+  display: inline-block;
+  background-color: #66bb6a;
+  color: #FFF;
+  width: 160px;
+  padding: 0.8em;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.12), 0 3px 20px 0 rgba(0, 0, 0, 0.12), 0 5px 6px -2px rgba(0, 0, 0, 0.2);
+  transition: .3s ease-out;
+}
+
+.header__h1__a:after {
+  opacity: 1;
+}
+
+.header__h1__a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 1024px) {
+  .header__h1__a {
+    padding: 1em;
+    width: 140px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .header__h1__a {
+    margin-top: 5px;
+    padding: 1.4em;
+    width: 40%;
+    font-size: 0.6rem;
+  }
+}
+
+/* Todo input */
+.container {
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  width: 70%;
+  margin-left: 15%;
+  max-width: 40%;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #333;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 80%;
+    margin-left: 10%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .container {
+    width: 95%;
+    margin-left: 2.5%;
+    max-width: 100%;
+  }
+}
+
+.fieldset__input {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+.fieldset__input:checked+.fieldset__label {
+  background: #ffd66b;
+  color: black;
+  text-shadow: 0 0 1px rgba(0, 0, 0, .7);
+}
+
+.fieldset__input:focus+.fieldset__label {
+  border: none;
+  outline-color: #eee;
+  outline-offset: -2px;
+  outline-style: none;
+  outline-width: 5px;
+  transition: 0.3s
+}
+
+.fieldset__label {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-right: 3%;
+  border-radius: 3px;
+  transition: all .2s;
+}
+
+.form--init{
+  width: 80%;
+  margin: 30px auto 20px auto;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+@media screen and (max-width: 599px) {
+  .form--init {
+    width: 90%;
+  }
+}
+
+.form--init__input {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+/* todo items */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3%;
+  padding-left: 2%;
+  padding-right: 2%;
+  text-align: center;
+  width: 100%;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+@media screen and (max-width: 1316px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid ul {
+  list-style-type: none;
+}
+
+/* list title */
+.grid__item__h3 {
+  position: relative;
+  background-color: #ffd66b;
+  border-radius: 40px 30px 20px 10px;
+  color: black;
+  width: 90%;
+  padding: 2%;
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
+.grid__item__h3--clickable {
+  background-color: #ffd700;
+  color: black;
+  font-weight: bolder;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.12), 0 3px 20px 0 rgba(0, 0, 0, 0.12), 0 5px 6px -2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-radius: 40px 40px 40px 40px;
+}
+
+.grid__item__h3--clickable:hover {
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s
+}
+
+/* each task */
+
+/* whole task item */
+.ul__li--item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+/* CheckBox */
+.span--round {
+  position: relative;
+  padding: 3%;
+}
+
+.span--round__input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+
+.span--round__label {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  position: relative;
+  top: 0;
+  width: 28px;
+}
+
+.span--round__label--done {
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}
+
+.span--round__label--done:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+  opacity: 1;
+}
+
+/* button in each task */
+.ul__li--item__btn {
+  position: relative;
+  float: right;
+  margin-right: 1px;
+  color: #f5ba13;
+  border-radius: 30px;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  outline: none;
+  background-color: #F0F0F0;
+  vertical-align: middle;
+}
+
+.ul__li--item__btn__material-icons {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+/* todo text */
+.ul__li--item__text {
+  flex-grow: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  width: 150px;
+  word-wrap: break-word;
+}
+
+/* completed todo */
+.ul__li--item__text--done {
+  text-decoration: line-through;
+}
+
+/* todo edit mode */
+.ul__li--item__form__input {
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 160px;
+  font-size: 16px;
+  text-align: center;
+  color: grey
+}
+
+/* Footer */
+.footer-wrap {
+  position: relative;
+  min-height: 50vh;
+}
